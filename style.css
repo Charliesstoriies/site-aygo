@@ -1,0 +1,108 @@
+/* ===== RÈGLES GÉNÉRALES ===== */
+/* "*" veut dire "tout le monde" : on applique ça à toutes les balises */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #f4f4f4;
+  color: #222;
+  line-height: 1.6;
+}
+
+/* ===== HEADER : le bandeau du haut ===== */
+header {
+  background-color: #3d079a;
+  color: white;
+  text-align: center;
+  padding: 30px 20px;
+}
+
+header h1 {
+  font-size: 2rem;
+  margin-bottom: 5px;
+}
+
+/* ===== NAV : le menu de navigation ===== */
+nav {
+  background-color: #16213e;
+  padding: 10px 0;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav a:hover {
+  color: #e94560;
+}
+
+/* ===== MISE EN PAGE : main + aside côte à côte ===== */
+/* On utilise "grid" pour faire deux colonnes, comme sur le dessin au tableau */
+/* Les marges gauche/droite ci-dessous = les flèches <---> du schéma */
+.wrapper {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 20px;
+  max-width: 1000px;
+  margin: 30px auto;
+  padding: 0 40px; /* <-- écart latéral gauche ET droite, comme sur le tableau */
+}
+
+/* ===== MAIN : le contenu principal ===== */
+main {
+  background-color: white;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+main section {
+  margin-bottom: 30px;
+}
+
+main h2 {
+  color: #1a1a2e;
+  border-bottom: 3px solid #e94560;
+  display: inline-block;
+  margin-bottom: 15px;
+}
+
+main ul {
+  margin-left: 20px;
+}
+
+/* ===== ASIDE : la colonne de droite ===== */
+aside {
+  background-color: #8145e9;
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  height: fit-content;
+  border-left: 3px solid #1a1a2e; /* <-- la ligne verticale du schéma, qui sépare contenu et aside */
+}
+
+aside h3 {
+  margin-bottom: 10px;
+}
+
+/* ===== FOOTER : le bandeau du bas ===== */
+footer {
+  background-color: #1a1a2e;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  margin-top: 30px;
+}
